@@ -344,4 +344,11 @@ class NetSuiteClient
         }
         return $key;
     }
+    
+    /**
+     * Set the host name
+     */
+    public function setHost($hostName) {
+        return $this->client->__setLocation($hostName . "/services/NetSuitePort_" . $this->config['endpoint']);
+    }
 }
